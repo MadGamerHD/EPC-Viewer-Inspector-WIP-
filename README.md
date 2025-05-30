@@ -1,38 +1,64 @@
-EPC Viewer & Inspector (WIP)
-This is a test tool for analyzing and reverse engineering .epc files used in
-Doctor Who: The Adventure Games, a 3D adventure game series developed by Sumo Digital and published by the BBC.
+Here's a GitHub README file for your **Doctor Who Adventure Games .epc Texture Exporter**. It emphasizes the **experimental** nature of the tool and warns that some features may not work as intended:
+---
 
-🔍 What it does (for now)
-Opens .epc files through a simple UI
+## `.epc Texture Exporter` (Doctor Who Adventure Games)
+This is a **very experimental** texture exporter for `.epc` files used in the **Doctor Who Adventure Games**. It allows you to scan `.epc` files for embedded textures, preview them, and export them in bulk.
 
-Lists all embedded ASCII strings (like filenames and paths)
+> ⚠️ **Disclaimer:** This tool is highly experimental. Some files may not extract correctly, previews may fail, and functionality may vary between `.epc` files. Use at your own risk.
+---
 
-Displays offsets and surrounding hex for each string
+### 🔧 Features
+* 📂 **Open .epc Files** – Load EPC game resource files.
+* 🔍 **Analyze Textures** – Automatically scan for embedded texture names and offsets.
+* 🖼️ **Preview Textures** – Preview selected textures within the app (supports standard formats).
+* 💾 **Export All Textures** – Batch-export textures into a folder next to the EPC file.
+* 📃 **Generate Report** – Save a scan report (`.txt`) listing found textures and their offsets.
+---
 
-Detects and lists index records pointing to resource data
+### 🖥️ Usage
 
-Allows exporting binary data blocks (e.g. models, textures)*
+1. Run the script:
+   ```bash
+   python epc.py
+   ```
 
-*Note: Some models or other resources may not export correctly due to incomplete format understanding. Just a heads-up!
+2. Use the UI to:
+   * **Open** an `.epc` file.
+   * **Analyze** it to detect embedded texture references.
+   * **Preview** a selected texture (some may fail).
+   * **Export All** detected textures to a folder.
 
-⚠️ This tool is still in development
-Please do not expect full functionality yet.
-It’s experimental and being built through ongoing reverse engineering of the EPC file format.
-Many assumptions are still being tested and verified.
+---
 
-🛠️ Vision for the Future
-This tool aims to become a full-featured modding utility for Doctor Who: The Adventure Games,
-allowing fans to inspect, extract, and eventually modify or inject new content into the game.
+### 🧪 Known Limitations
+* Not all embedded textures may be detected reliably.
+* Some exported files may be corrupt or unreadable.
+* Image preview may fail depending on the texture format or encoding.
+* No official documentation exists for `.epc` files — this is based on reverse engineering.
 
-Future plans include:
+---
 
-Full automatic extraction of all assets
+### 📦 Dependencies
+* [Python 3.x](https://www.python.org/)
+* [Pillow (PIL)](https://python-pillow.org/)
 
-Recognition of embedded file formats (.mb, .tga, .scene, etc.)
+Install Pillow with:
 
-Optional model/texture previewing
+```bash
+pip install pillow
+```
 
-Repacking and patching support for modding workflows
+---
 
-This is a fan-made utility provided for educational and archival purposes.
-All rights to Doctor Who and related assets belong to the BBC.
+### 🧠 Background
+This tool was created for exploring textures in **Doctor Who Adventure Games**, which use `.epc` files to store game assets. Since the EPC format is undocumented, the logic is based on observed patterns and educated guesses.
+
+---
+
+### ✅ Credits
+Made with love for Doctor Who fans and hobbyist modders.
+
+---
+
+### 📜 License
+This project is released under the MIT License.
