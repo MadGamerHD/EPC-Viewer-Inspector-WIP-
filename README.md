@@ -1,6 +1,3 @@
-Here's a GitHub README file for your **Doctor Who Adventure Games .epc Texture Exporter**. It emphasizes the **experimental** nature of the tool and warns that some features may not work as intended:
----
-
 ## `.epc Texture Exporter` (Doctor Who Adventure Games)
 This is a **very experimental** texture exporter for `.epc` files used in the **Doctor Who Adventure Games**. It allows you to scan `.epc` files for embedded textures, preview them, and export them in bulk.
 
